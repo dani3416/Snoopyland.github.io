@@ -36,7 +36,7 @@
         <div class="chatbot-btn">
             <img 
             id="chatbot-icon" 
-            src="https://cdn-user-icons.flaticon.com/165359/165359927/1755605325207.svg?token=exp=1755606226~hmac=caf8042a8f167a23b9a32f4e8766f9ab" 
+            src="001-chatbot.png" 
             alt="Chatbot">
         </div>
         <div class="chatbot-popup" id="chatbot-popup">
@@ -309,6 +309,33 @@
       btn.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/128/606/606807.png" alt="Luna" width="23" height="23">`;
     }
   });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const chatbotBtn = document.querySelector(".chatbot-btn");
+  const chatbotPopup = document.getElementById("chatbot-popup");
+  const chatbotIcon = document.getElementById("chatbot-icon");
+
+  // Iconos
+  const lightIcon = "001-chatbot.png";
+  const darkIcon = "002-chatbot-1.png";
+
+  // Toggle popup
+  chatbotBtn.addEventListener("click", () => {
+    chatbotPopup.style.display = 
+      chatbotPopup.style.display === "block" ? "none" : "block";
+  });
+
+  // Escuchar cambios de modo oscuro
+  const observer = new MutationObserver(() => {
+    if (document.body.classList.contains("dark-mode")) {
+      chatbotIcon.src = darkIcon;
+    } else {
+      chatbotIcon.src = lightIcon;
+    }
+  });
+
+  observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+});
 
   </script>
 
