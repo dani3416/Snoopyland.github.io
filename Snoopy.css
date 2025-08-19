@@ -1,0 +1,474 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+body {
+  background-color: #c3bada;
+  color: #1c1524;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header normal (modo claro) */
+header {
+  background-color: #b39ddb; /* moradito claro */
+  color: #635091;
+}
+
+header a{
+    color: #231446;
+    text-decoration: none;
+}
+
+/* Cuando se active dark-mode */
+body.dark-mode header {
+  background-color: #271d33; /* morado oscuro */
+  color: #e9e1ee;
+}
+
+body.dark-mode header a{
+    color: #dfdaeb;
+    text-decoration: none;
+}
+
+
+/* 🌙 Modo oscuro */
+body.dark-mode {
+  background-color: #1a0e25;
+  color: #e9e1ee;
+}
+
+/* Footer normal */
+
+footer{
+    background-color: #8e85ad;
+    color: #403855;
+}
+
+.columna{
+    text-decoration: none;
+    color: #593b7a;
+}
+
+.columna ul li a{
+    color: #593b7a;
+}
+
+.columna ul li a:hover{
+    text-decoration: underline;
+    color: #694da8;
+}
+
+body.dark-mode .columna ul li a:hover{
+    color: #8e85ad;
+}
+
+/* Footer en modo oscuro */
+body.dark-mode footer {
+  background-color: #271d33; /* morado oscuro */
+  color: #aea0c4;
+}
+
+footer h2{
+    color: #433664;
+}
+
+body.dark-mode footer h2{
+    color: #a89bc0;
+}
+
+body.dark-mode .columna{
+    color: #aea0c4;
+}
+
+body.dark-mode .columna ul li a{
+    color: #aea0c4;
+}
+
+body.dark-mode .copyright{
+    color: #aea0c4;
+}
+
+/* Botón para que no quede feo */
+#toggle-mode {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+#toggle-mode:hover {
+  background: rgba(0, 0, 0, 0);
+}
+body.dark-mode #toggle-mode:hover {
+  background: rgba(255, 255, 255, 0.021);
+}
+
+/* Opcional: que las imágenes no cambien de color */
+#toggle-mode img {
+  width: 24px;
+  height: 24px;
+}
+
+h1{font: size 3.5em;}
+h2{font-size: 2.0em;}
+h3{font: size 2.5em;}
+p{font-size: 1em;}
+ul{list-style: none;}
+li{font-size: 1.1em;}
+
+.info-extra {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+button{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 15px;
+    border: 1px solid rgba(28, 27, 41, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.048);
+    color: beige;
+    background-color:rgb(84, 87, 139)
+}
+
+button:hover{
+        background-color:rgb(58, 60, 99)
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.color-acento{color:rgb(101, 88, 148)}
+
+
+header .logoicon{
+    justify-content:left;
+    margin-left: left;
+    align-items: left;
+    height: 35px;
+    width: auto;
+    padding: 0px
+
+}
+
+header .logo{
+    margin: 0;
+    padding: 16px 30px;
+    font-weight: bold;
+    font-size: 1.7em;
+    justify-content: center;
+
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+
+header a{
+    padding: 6px 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: rgb(102, 92, 158);
+}
+
+footer{
+    padding: 20px 0px;
+    text-align: center;
+    justify-content: center center;
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: column;
+    align-items: center;
+}
+
+.columna, .columnaredes{
+margin: 15px;
+}
+
+footer h2{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.columna p{
+    margin: 5px 0px;
+}
+
+.columna ul{
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+}
+
+.columna ul li{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 8px 0;
+}
+
+.columna ul li a{
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.columna ul li a:hover{
+    text-decoration: underline;
+}
+
+.columnaredes img{
+    width: 35px;
+    margin: 0 8px;
+    transition: transform 0.3s;
+}
+
+.columnaredes img:hover{
+    transform: scale(1.2);
+}
+
+footer .copyright{
+    margin-top: 20px;
+    font-size: 16px;
+    color:#4b4164
+}
+
+@media (max-width: 760px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#Snoopy h1{
+    font-size: 3em;
+    padding: 0px 30px;
+}
+
+#Snoopy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("Camp_Snoopy_Photo_011301.jpg.photo_modal_show_home_large.jpg");
+    background-size: cover;
+    background-position:center center;
+}
+
+#Snoopy h1{
+    color: #f0eafd
+}
+
+#Snoopy button{
+    font-size: 1.4em
+}
+
+
+#Somos-Snoopyland .container{
+    text-align: center;
+    padding: 150px 50px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+
+#sabiasque .container{
+    text-align: center;
+    padding: 160px 20px;
+    padding-top: 90px;
+}
+
+
+#sabiasque li{
+    margin: 15px 12px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 25px;
+}
+
+
+
+@media (min-width: 850px){
+     header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .logo{
+         margin-left: -80px;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+   
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        margin-right: -100px;
+    }
+
+    #Somos-Snoopyland .container{ 
+        justify-content: space-evenly;
+        display: flex;
+        padding-bottom: 20px;
+
+    }
+
+    #Somos-Snoopyland .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+       padding-top: 30px;
+    }
+
+    #somos-snoopyland h2{
+        margin-top: 0;
+    }
+
+    #Somos-Snoopyland .img-container{
+        background-image: url("originaldd.png");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+
+    }
+
+    #Snoopy button{
+        transition: transform 0.3 ease;
+    }
+
+    #Snoopy button:hover{
+        transform: scale(1.07);
+    }
+
+    #sabiasque{
+        background-image: url("https://s3-eu-west-1.amazonaws.com/beta.lagenda/styles/image1000x1000/s3/programacion/charliesnoopy.png?itok=9nXA4L0j");
+        background-repeat: no-repeat;
+        background-size: 260px; 
+        background-position:calc(100vw - 370px) 265px;
+    }
+
+    #sabiasque .container{
+        text-align: initial;
+    }
+
+    #sabiasque h2{
+        text-align: center;
+        font-size: 45px;
+    }
+
+    #sabiasque ul{
+        margin-left: 30px;
+
+    }
+
+    #sabiasque li{
+        text-align: initial;
+    }
+
+    @media (min-width:1200px){
+        #sabiasque{
+            background-position-x: calc(100vw - 580px);
+        }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #contacto .container{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    footer h2{
+        font-size: 30px;
+        padding-bottom: 0px;
+    }
+
+    .footer-container{
+    padding-top: 0px;
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    }
+
+    .columna, .columnaredes {
+    flex: 1;
+    margin: 0px ;
+    min-width: 300px;
+  }
+
+  .columna p{
+    margin-top: 20px;
+  }
+
+  .columnaredes{
+    padding-top: 50px;
+    padding-left: 15px;
+  }
+  
+  footer .copyright{
+    margin-top: 15px;
+  }
+
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <link rel="stylesheet" href="Snoopy.css">
+    <link rel="icon" type="image/icono" href="Snoopy.webp">
+    <title>Snoopyland</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+             <p class="logo">
+                    <img src="Snoopy.webp" alt="iconosnoopy" class="logoicon">Snoopyland
+            </p>
+            <nav>
+            <button id="toggle-mode">
+            <img src="https://cdn-icons-png.flaticon.com/128/606/606807.png" alt="Luna" width="23" height="23">
+            </button>
+
+                <a href="#Somos-Snoopyland">Quienes somos</a>
+                <a href="#sabiasque">¿Sabías que?</a>
+                <a href="Peanuts.html">Peanuts</a>
+                <a href="programas.html">Programas</a>
+
+            </nav>
+        </div>
+    </header>
+
+     <section id="Snoopy">
+        <h1>Conoce todo sobre <br> Snoopy y sus amigos</h1>
+      <form action="historia.html">
+
+          <button>Saber más</button>
+      </form>
+    </section>
+
+    <section id="Somos-Snoopyland">
+        <div class="container">
+            <div class="img-container"></div>
+            <div class="texto">
+
+                <h2>Somos <span 
+                    class="color-acento">Snoopyland</span></h2>
+                    <p>Bienvenidos a SnoopyLand. Aquí celebramos las historias, la amistad y las aventuras de Snoopy, Charlie Brown, Woodstock, Lucy, Linus y todos los amigos que han marcado generaciones. Nuestro sitio está pensado para quienes crecieron con estas historietas y también para quienes están descubriendo su encanto. En SnoopyLand encontrarás imágenes, datos curiosos y recuerdos que nos conectan con el legado de Charles M. Schulz.</p>
+            </div>
+        </div>
+    </section>
+
+     <section id="sabiasque">
+         <div class="container">
+        <h2>¿Sabías que?</h2>
+        <br>
+             <ul>
+             <li>🐾 Snoopy fue creado en 1950 por Charles M. Schulz</li>
+             <li>🐾 Snoopy tuvo una dueña antes, llamada Lila</li>
+             <li>🐾 Linus siempre carga una manta azul para sentirse seguro</li>
+             <li>🐾 Charlie Brown siempre ha tenido mala suerte... <br>¡ni una vez patea el balón!</li>
+             <li>🐾 Charles M. Schulz dibujó personalmente <br>cada tira de Peanuts durante casi 50 años.</li>
+             </ul>
+         </div>
+    </section>
+
+    <footer>
+        <h2>Contacto</h2>
+
+        <section id="contaacto">
+        <div class="footer-container">
+    <div class="columna">
+        <p>Correo: contacto@snoopyland.com</p>
+        <p>Teléfono: +57 325 456 9032</p>
+        <p>Horarios: 8:00 a.m - 4:00 p.m</p>
+    </div>
+
+     <div class="columna">
+            <ul>
+                <li><a href="Snoopy.html">Inicio</a></li>
+                <li><a href="Snoopy.html#Somos-Snoopyland">Acerca de nosotros</a></li>
+                <li><a href="programas.html">Servicios/Productos</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+
+        <div class="columnaredes">
+            <!-- Íconos con enlaces -->
+            <a href="https://www.instagram.com/snoopygrams/">
+            <img id="Instagram" src="instaoscuro.png" alt="Instagram">
+            </a>
+
+            <a href="https://web.facebook.com/Snoopy?locale=es_LA">
+            <img id="Facebook" src="facebookoscuro.png" alt="Facebook">
+            </a>
+            
+        </div>
+        </div> 
+
+    <div class="copyright">
+        <p>&copy; SnoopyLand 2025. Todos los derechos reservados</p>
+    </div>
+    </section>
+
+</footer>
+
+<script>
+  const btn = document.getElementById("toggle-mode");
+
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      btn.innerHTML = `<img src="https://cdn-user-icons.flaticon.com/165359/165359927/1755546167479.svg?token=exp=1755547067~hmac=181c214bc38f682a77bfc0dc8dca7c87" alt="Sol" width="24" height="24">`;
+    } else {
+      btn.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/128/606/606807.png" alt="Luna" width="23" height="23">`;
+    }
+  });
+
+  </script>
+
+    <script>
+    const toggleDark = document.getElementById("dark-toggle");
+    const Instagram = document.getElementById("Instagram");
+    const Facebook = document.getElementById("Facebook");
+
+    toggleDark.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+        // Activa versión clara
+        Instagram.src = "instaoscuro.png";
+        Facebook.src = "facebookoscuro.png";
+        } else {
+        // Vuelve a la versión oscura
+        Instagram.src = "instaclaro.png";
+        Facebook.src = "facebookclaro.png";
+        }
+    });
+    </script>
+
+
+</body>
+</html>
