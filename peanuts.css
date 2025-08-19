@@ -206,6 +206,64 @@ header a:hover{
     color: rgb(84, 87, 139);
 }
 
+        .chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;  /* en la esquina inferior izquierda */
+        z-index: 1100;
+        }
+
+        /* Botón circular */
+        .chatbot-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #ad89ce;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.288);
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.5s ease;
+        }
+
+        .chatbot-btn img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.5s ease;
+        }
+
+        .chatbot-btn:hover {
+        transform: scale(1.1);
+        }
+
+        /* Ventanita popup */
+        .chatbot-popup {
+        display: none; /* Oculto por defecto */
+        position: absolute;
+        bottom: 70px; /* justo encima del botón */
+        left: 0;
+        background: #bfa4d6;
+        color: #361852;
+        padding: 5px 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.418);
+        font-size: 14px;
+        font-weight: bold;
+        transition: opacity 0.5s ease;
+        }
+
+        /* Dark mode */
+        body.dark-mode .chatbot-btn {
+        background-color: #3e294b;
+        }
+
+        body.dark-mode .chatbot-popup {
+        background: #32223b;
+        color: #cebada;
+        }
+
+
 .ANIVERSARIO{
     padding-top: 90px;
     display: flex;
@@ -465,7 +523,20 @@ padding: 0px 20px;
 
 /* responsive */
 @media (max-width: 520px) {
-  .music-controls { right: 12px; bottom: 12px; padding: 6px; gap: 8px; }
+.music-controls {
+  position: right;
+  right: 500px;
+  bottom: 200px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(62, 48, 70, 0.897);
+  padding: 8px 10px;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  z-index: 9999;
+}
+  .music-controls { right: 60px; bottom: 12px; padding: 6px; gap: 8px; }
   .mc-vol { width: 80px; }
 }
 
