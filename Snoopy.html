@@ -37,6 +37,20 @@
       </form>
     </section>
 
+            <!-- Botón flotante del chatbot -->
+        <div class="chatbot-container">
+        <div class="chatbot-btn">
+            <img 
+            id="chatbot-icon" 
+            src="https://cdn-user-icons.flaticon.com/165359/165359927/1755605325207.svg?token=exp=1755606226~hmac=caf8042a8f167a23b9a32f4e8766f9ab" 
+            alt="Chatbot">
+        </div>
+        <div class="chatbot-popup" id="chatbot-popup">
+            <p>Chatbot</p>
+        </div>
+        </div>
+
+
     <section id="Somos-Snoopyland">
         <div class="container">
             <div class="img-container"></div>
@@ -116,6 +130,34 @@
     }
   });
 
+  document.addEventListener("DOMContentLoaded", () => {
+  const chatbotBtn = document.querySelector(".chatbot-btn");
+  const chatbotPopup = document.getElementById("chatbot-popup");
+  const chatbotIcon = document.getElementById("chatbot-icon");
+
+  // Iconos
+  const lightIcon = "https://cdn-user-icons.flaticon.com/165359/165359927/1755605325207.svg?token=exp=1755606226~hmac=caf8042a8f167a23b9a32f4e8766f9ab";
+  const darkIcon = "https://cdn-user-icons.flaticon.com/165359/165359927/1755605338480.svg?token=exp=1755606239~hmac=7b6d687133107ea5d944318ff6b963f8";
+
+  // Toggle popup
+  chatbotBtn.addEventListener("click", () => {
+    chatbotPopup.style.display = 
+      chatbotPopup.style.display === "block" ? "none" : "block";
+  });
+
+  // Escuchar cambios de modo oscuro
+  const observer = new MutationObserver(() => {
+    if (document.body.classList.contains("dark-mode")) {
+      chatbotIcon.src = darkIcon;
+    } else {
+      chatbotIcon.src = lightIcon;
+    }
+  });
+
+  observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+});
+
+
   </script>
 
     <script>
@@ -140,6 +182,4 @@
 
 
 </body>
-
 </html>
-
