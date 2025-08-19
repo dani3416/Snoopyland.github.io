@@ -316,6 +316,10 @@ padding: 0px 20px;
     box-sizing: border-box;
 }
 
+body.dark-mode .todito{
+  background-color: #413357;
+}
+
 .todito{
     box-shadow: 0 4px 15px #100b2598;
 }
@@ -1158,3 +1162,4 @@ footer .copyright{
     margin-top: 15px;
   }
 }
+
